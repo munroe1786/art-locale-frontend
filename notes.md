@@ -15,3 +15,5 @@ reducer takes in the previous state as the first argument and then an action obj
 first argument in reducer - set initial state in reducer to an object for consistency, set a key in that object called artists pointing to an empty array - that way we can add more key/value pairs if needed
 
 second argument in reducer is action
+
+anytime we see dispatch, we want that action object to be sent to the reducer in app which will then update the value of the store
