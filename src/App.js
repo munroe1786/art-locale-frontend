@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {fetchArtists} from './actions/fetchArtists';
 
 class App extends React.Component {
 
@@ -19,4 +21,32 @@ class App extends React.Component {
   }
 }
 
-export default App;
+//onst mapStateToProps = {state} => {
+//  return {
+//
+//  }
+//}//
+
+export default connect(null, {fetchArtists} )(App);
+
+//mapStateToProps-usually first argument of connect
+// is our way of accessing
+//values in our store as props
+
+//second argument of connect is mapDispatchToProps
+//or an action creator eg: fetchArtists
+
+//second argument gives up the ability
+//to update our store directly from this
+//component
+
+//maptStateToProps---gives us access to 
+//current store
+
+//second argument---gives us ability to 
+//dispatch new actions to our store
+//directly from our component
+
+
+
+
