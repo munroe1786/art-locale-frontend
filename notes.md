@@ -17,3 +17,43 @@ first argument in reducer - set initial state in reducer to an object for consis
 second argument in reducer is action
 
 anytime we see dispatch, we want that action object to be sent to the reducer in app which will then update the value of the store
+
+//store is where we store data globally
+
+//we will dispatch(send) action objects to our reducer
+
+//reducer will take in action object and decide, 
+//based on conditions in the reducer,
+//what we want to update about our current store 
+//and return a new version of the store
+
+//pass store in as a prop
+
+//compose comes from redux, allows us to combine a couple 
+//of different middlewares into one so that we can pass one argument
+//as the second argument of createStore
+
+//Provider gives access to store to App and its
+//child components
+
+//set up our store
+
+//any component we wrap in provider will have access
+//to our redux store
+
+//need middleware to incorporate thunk with our store
+
+//componentDidMount() {
+  //  fetch('http://localhost:3000/api/v1/artists')
+  //  .then(response => response.json()) 
+  //  .then(data => console.log(data)) 
+  //}
+
+    //return from fetch is response
+    //data is the json version of response and is the arg here
+    //thens won't complete until the previous request is completed
+    //when you chain thens, the return value of the previous one is the argument
+    //in the following one
+
+  //fetch request - GET is default request type
+
