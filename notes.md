@@ -57,3 +57,16 @@ anytime we see dispatch, we want that action object to be sent to the reducer in
 
   //fetch request - GET is default request type
 
+//thunk
+    -allows us to return a function
+        from the action creator
+        that can be used other places
+        easily
+
+connect calls dispatch for us on the 
+    return value of fetchArtists
+    -fetch requests are async and    take time
+    -connect expects an immediate return from action creator
+    -thunk allows us to call dispatch
+        from inside of action creator
+    -which allows us twait            until fetch finishes before anything      is   dispatched to our reducer
