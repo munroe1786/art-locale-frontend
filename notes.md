@@ -70,3 +70,6 @@ connect calls dispatch for us on the
     -thunk allows us to call dispatch
         from inside of action creator
     -which allows us twait            until fetch finishes before anything      is   dispatched to our reducer
+
+
+--a container should render other components and handle changes 
