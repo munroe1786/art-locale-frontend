@@ -1,31 +1,25 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchArtists} from './actions/fetchArtists';
+import ArtistsContainer from './containers/ArtistsContainer';
 
 class App extends React.Component {
-
-  componentDidMount() {
-    this.props.fetchArtists()
-  }
-  
-  
   
   render () {
     return (
       <div className="App">
-        App
+        <ArtistsContainer />
       </div>
     );
   }
 }
 
-//onst mapStateToProps = {state} => {
+//const mapStateToProps = {state} => {
 //  return {
 //
 //  }
 //}//
 
-export default connect(null, {fetchArtists} )(App);
+export default connect()(App);
 
 //mapStateToProps-usually first argument of connect
 // is our way of accessing
@@ -44,6 +38,12 @@ export default connect(null, {fetchArtists} )(App);
 //second argument---gives us ability to 
 //dispatch new actions to our store
 //directly from our component
+
+//const mapStateToProps = {state} => {
+//  return {
+//
+//  }
+//}//
 
 
 
