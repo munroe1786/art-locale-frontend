@@ -1,5 +1,13 @@
 export default function artistReducer(state = {artists: []}, action) {
-    return state
-
+    debugger
+    switch (action.type) {
+        case 'FETCH_ARTISTS':
+            return state
+        default:
+            return state
+    }
 }
 
+//the cases in our switch are checking 
+//the action type
+//

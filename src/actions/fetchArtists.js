@@ -42,3 +42,7 @@ export function fetchArtists() {
 //next .then
 //artists is the same as the converted json
 //response
+//then dispatch - go into our reducer, take
+//our reducer this action object, take that
+//and update our redux store based on the info
+//being sent
