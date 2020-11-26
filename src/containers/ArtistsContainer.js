@@ -5,6 +5,8 @@ import {connect} from 'react-redux';
 
 class ArtistsContainer extends React.Component {
 
+    
+
     render() {
         return(
             <div>
@@ -16,7 +18,13 @@ class ArtistsContainer extends React.Component {
 
 }
 
-export default connect() (ArtistsContainer);
+const mapStateToProps = state => {
+    return {
+        artists: state.artists
+    }
+}
+
+export default connect(mapStateToProps) (ArtistsContainer);
 
 //makes sense that this container
 //will contain other components  
@@ -33,3 +41,15 @@ export default connect() (ArtistsContainer);
 //backend, add them to redux store
 //and use those artists from our
 //backend---need to connect to the store
+
+//because of Provider, we can connect
+//any child of App to the store
+
+//mapStateToProps allows us to see
+//the data - takes in state from our redux
+//store - we want to return an object called
+//artists 
+
+//give this component access through props
+//to the artists inside our state
+
