@@ -4,6 +4,12 @@ class ArtistInput extends React.Component {
 
     state = {name: '', style: ''}
 
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
     render() {
         return (
             <div>
@@ -12,11 +18,18 @@ class ArtistInput extends React.Component {
                         <input type='text' 
                         placeholder='Name' 
                         value={this.state.name}
-                        /><br/>
+                        name="name"
+                        onChange={this.handleChange}
+                        />
+                        <br/>
                     <label>Style:</label>
                         <input type='text' 
                         placeholder='Style'
-                        value={this.state.style} />
+                        value={this.state.style}
+                        name="style"
+                        onChange={this.handleChange} 
+                        />
+                        <input type='submit' />
                 </form>
             </div>
         )
@@ -44,3 +57,21 @@ export default ArtistInput;
 //and editing - might make sense to save those
 //values in your redux store so that you
 //can reuse that component
+
+//since we're in a class comp we need the 
+//this keyword so it knows we're talking
+//about the handleChange function in the 
+//comp
+
+//need name in our form input to close the
+//loop to make it a controlled form 
+//and then in handleChange you're abstracting
+//name needs to match the keys in your state
+
+//[event.target.name] - brackets are first 
+//evaluating what is inside the brackets - 
+//either name or style in this case -
+//and then sets that as the key - so name
+//or style are the key here - abstraction
+//way of JS assigning a key that needs
+//to be evaluated first
