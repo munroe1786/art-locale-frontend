@@ -14,7 +14,7 @@ class ArtistsContainer extends React.Component {
         return(
             <div>
                 <ArtistInput />
-                <Artists />
+                <Artists artists={this.props.artists}/>
             </div>
         )
     }
@@ -87,5 +87,18 @@ export default connect(mapStateToProps, {fetchArtists})(ArtistsContainer);
 //thunk allows us to use dispatch inside our action
 //creator
 
+//need to pass down props from Artists
 
+//this.props.artists in curly brackets
+
+//mapStateToProps allows us to get the artists
+//from our redux store, accessing them thru 
+//props in container and then sending them
+//down as props to Artists component
+
+//when we refresh react and redux do not hold
+//the states
+//the only reason we see the artists is
+//because we are fetching them and can
+//send them down to the artists component
 
