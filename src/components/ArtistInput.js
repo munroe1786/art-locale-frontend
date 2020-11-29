@@ -1,8 +1,14 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {addArtist} from '../actions/addArtist'
+
 
 class ArtistInput extends React.Component {
 
-    state = {name: '', style: ''}
+    state = {
+        name: '', 
+        style: ''
+    }
 
     handleChange = (event) => {
         this.setState({
@@ -10,8 +16,9 @@ class ArtistInput extends React.Component {
         })
     }
 
-    handleSubmit = () => {
-
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.props.addArtist(this.state)
     }
 
     render() {
@@ -41,7 +48,7 @@ class ArtistInput extends React.Component {
     }
 }
 
-export default ArtistInput;
+export default connect(null, {addArtist})(ArtistInput);
 
 //need a controlled form
 //uncontrolled form - the elements float
@@ -84,3 +91,26 @@ export default ArtistInput;
 //handleSubmit goes in the form tag because
 //when someone clicks submit we want the whole
 //form to submit
+
+//point of app is to save new artists or changes
+//to those artists in our db and update our
+//store so we need a newArtist action
+
+//this comp does not need mapStateToProps 
+//because it will be adding something new 
+//and it doesn't care about what's already
+//in the store - so we can pass null as 
+//the first argument for connect
+
+//pass the action creator for add Artist 
+//as the second argument - alternative for
+//writing a mapDispatchToProps function -
+//thunk allows us to call dispatch in
+//our addArtist instead 
+//of connect automatically calling -
+//we want access to the dispatch function
+//inside our addArtist creator
+
+//need this.state as an argument in
+//this.props.addArtist so that we can 
+//send the data to the addArtist action
