@@ -1,7 +1,6 @@
 export const addArtist = (data) => {
-    debugger
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/artists`, {
+        fetch('http://localhost:3000/api/v1/artists', {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
@@ -9,8 +8,11 @@ export const addArtist = (data) => {
             method: 'POST',
             body: JSON.stringify(data)
         })
-        
-
+        .then(response => response.json())
+        .then(artist => dispatch({
+            type: 'ADD_ARTIST',
+            payload: artist
+        }))
     }
 }
 
@@ -31,6 +33,19 @@ export const addArtist = (data) => {
 //passing in as data
 //stringify it because the server expects
 //it as a string and it's an object now
+
+//first then converts the string that's
+//sent over to JSON
+
+//next then - data - is either the new account
+//or the error object (both from the backend)
+
+//account is the json-ified response
+
+//then dispatch to the reducer with a type 
+//add artist and a payload of artist
+
+//need to add another case to our reducer
 
 
 
