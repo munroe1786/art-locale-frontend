@@ -19,6 +19,10 @@ class ArtistInput extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addArtist(this.state)
+        this.setState({
+            name: '',
+            style: ''
+        })
     }
 
     render() {
@@ -114,3 +118,12 @@ export default connect(null, {addArtist})(ArtistInput);
 //need this.state as an argument in
 //this.props.addArtist so that we can 
 //send the data to the addArtist action
+
+//to get form to reset to empty fields
+//add this.setState and state to 
+//handleSubmit
+
+//setState is asynchronous so it will 
+//not clear out the state until everything
+//else in handleSubmit is run
+

@@ -13,7 +13,7 @@ class ArtistsContainer extends React.Component {
     render() {
         return(
             <div>
-                <ArtistInput />
+                <ArtistInput /><br /><br />
                 <Artists artists={this.props.artists}/>
             </div>
         )
