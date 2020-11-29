@@ -1,13 +1,14 @@
 import React from 'react';
+import Artist from './Artist';
 
 const Artists = (props) => {
 
     return(
         <div>
             {props.artists.map(artist => 
-                <li key={artist.id}>
-                {artist.name} - {artist.style}
-                </li>
+                <div key={artist.id}>
+                <Artist artist={artist}/>
+                </div>
             )}
         </div>
 
