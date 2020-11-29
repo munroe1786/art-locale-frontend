@@ -5,7 +5,12 @@ class ArtistInput extends React.Component {
     render() {
         return (
             <div>
-                ArtistInput
+                <form>
+                    <label>Artist Name:</label>
+                        <input type='text' placeholder='Name' /><br/>
+                    <label>Style:</label>
+                        <input type='text' placeholder='Style' />
+                </form>
             </div>
         )
     }
