@@ -73,3 +73,21 @@ connect calls dispatch for us on the
 
 
 --a container should render other components and handle changes 
+
+//app comp rendered our artists container
+    in artists containter rendered an
+    artists comp and artist input comp
+    -set up our fetch artists, goes into our backend and then dispatching to 
+    our reducer
+    reducer is then returning a new state 
+    depending on the data in the fetch 
+    request
+    artists container has componentDidMount
+    so that every time the comp mounts it will make that fetch request to the back end
+    artists container also had mapStateToProps so we can access artists in our store as props and send 
+    them to our artists comp
+    also passed in fetchArtists to connect
+    so that when we call this.props.fetchArtists and make a fetch request
+    and return dispatch and send that action to our reducer it will update our
+    redux store which would not happen if we did not pass in fetchArtists as the second argument
+
