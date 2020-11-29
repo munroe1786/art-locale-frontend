@@ -10,10 +10,14 @@ class ArtistInput extends React.Component {
         })
     }
 
+    handleSubmit = () => {
+
+    }
+
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>Artist Name:</label>
                         <input type='text' 
                         placeholder='Name' 
@@ -29,6 +33,7 @@ class ArtistInput extends React.Component {
                         name="style"
                         onChange={this.handleChange} 
                         />
+                        <br />
                         <input type='submit' />
                 </form>
             </div>
@@ -75,3 +80,7 @@ export default ArtistInput;
 //or style are the key here - abstraction
 //way of JS assigning a key that needs
 //to be evaluated first
+
+//handleSubmit goes in the form tag because
+//when someone clicks submit we want the whole
+//form to submit
