@@ -153,3 +153,4 @@ export default connect(mapStateToProps, {fetchArtists})(ArtistsContainer);
 //us params - we see id - can use this 
 //to access the specific account we want
 //to see
+

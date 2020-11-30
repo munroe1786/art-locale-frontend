@@ -6,14 +6,14 @@ const Artist = (props) => {
 
     let artist = props.artists[props.match.params.id - 1]
     
-    console.log(artist)
+    //console.log(artist)
 
     return (
         <li>
-            artist
+            {artist ? artist.name : null} -
+            {artist ? artist.style : null}
         </li>
     )
-
 }
 
 export default Artist;
@@ -32,3 +32,18 @@ export default Artist;
 
 //the difference is that used inside App, 
 //App would not be able to have a route
+
+//props.artists is an array with all of
+//our artists
+
+//props.match.params.id - 1 will give us
+//the id that is in our url - is just an 
+//array and we are accessing a specific
+//element in the array - 1 because arrays
+//start at 0
+
+//use a ternary operator to render an account
+//because the first time the props are coming
+//through we don't have the artists yet
+//and then after the first render 
+//we have the artists
