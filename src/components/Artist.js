@@ -1,17 +1,24 @@
 import React from 'react';
 
 const Artist = (props) => {
+
+    //console.log(props)
+
+    let artist = props.artists[props.match.params.id - 1]
     
-    console.log(props)
+    console.log(artist)
+
     return (
         <li>
-            {props.artist.name} - {props.artist.style}
+            artist
         </li>
     )
 
 }
 
 export default Artist;
+
+//{props.artist.name} - {props.artist.style}
 
 //need to use React Router to be able to see
 //a specific account

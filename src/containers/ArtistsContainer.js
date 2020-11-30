@@ -1,7 +1,9 @@
 import React from 'react';
 import Artists from '../components/Artists';
 import ArtistInput from '../components/ArtistInput';
+import Artist from '../components/Artist';
 import {connect} from 'react-redux';
+import {Route} from 'react-router-dom';
 import {fetchArtists} from '../actions/fetchArtists';
 
 class ArtistsContainer extends React.Component {
@@ -13,8 +15,9 @@ class ArtistsContainer extends React.Component {
     render() {
         return(
             <div>
-                <ArtistInput /><br /><br />
-                <Artists artists={this.props.artists}/>
+                <Route path='/artists/new' component={ArtistInput}/>
+                <Route path='/artists/:id' render={(routerProps) => <Artist {...routerProps} artists={this.props.artists}/> } />
+                <Route exact path='/artists' render={(routerProps) => <Artists {...routerProps} artists={this.props.artists}/> } />
             </div>
         )
     }
@@ -102,3 +105,51 @@ export default connect(mapStateToProps, {fetchArtists})(ArtistsContainer);
 //because we are fetching them and can
 //send them down to the artists component
 
+//routes need to be able to have access to the 
+//props that they need so we need to set up 
+//routes that can send props through
+//routes to the components
+
+//only need to import Route as App is wrapped
+//inside Router
+
+//if comp you are setting up in Route accepts
+//props or needs props, then you must pass 
+//them in the route
+
+//render takes in a function so for a route,
+//pass in the component just as if you were
+//rendering it outside the route
+
+//need exact keyword in route to only see 
+//one component at a time
+//without exact, Route will render ArtistInput
+//Artists because they both urls with 
+//artists in them
+
+//downfall of using exact is issues with 
+//nested routes
+
+//can get around that by setting up a sort 
+//of nested route in the artists container
+
+//routes don't render components directly
+//they are conditionally rendered based 
+//on the url
+
+//router props let us access to the params
+//in props
+
+//router props are passed in in addition to
+//the props we have set up - this will
+//automatically add these router props 
+//into the props objects our components
+//are receiving
+
+//params can be expanded to see the key/value
+//pairs
+
+//router props through match are giving
+//us params - we see id - can use this 
+//to access the specific account we want
+//to see
