@@ -14,10 +14,15 @@ class MuseumInput extends React.Component {
         })
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault()
+        
+    }
+
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>Museum Name:</label>
                         <input type="text"
                             name="name"
