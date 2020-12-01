@@ -8,8 +8,10 @@ class MuseumInput extends React.Component {
         description: ''
     }
 
-    handleChange = () => {
-
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
     }
 
     render() {
@@ -20,22 +22,24 @@ class MuseumInput extends React.Component {
                         <input type="text"
                             name="name"
                             value={this.state.name}
-
-
+                            onChange={this.handleChange}
                             />
+                            <br />
                     <label>Museum Location:</label>
                         <input type="text"
                             name="location"
                             value={this.state.location}
-                            
+                            onChange={this.handleChange}
                             />
+                            <br />
                     <label>Museum Description:</label>
                         <input type="text"
                             name="description"
                             value={this.state.description}
-                            
+                            onChange={this.handleChange}
                             />
-                </form>
+                            <br />
+                    <input type="submit"/>                </form>
             </div>
         )
     }

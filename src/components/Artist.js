@@ -23,7 +23,7 @@ const Artist = (props) => {
         //an artist 
 
     
-    console.log(artist)
+    //console.log(artist)
 
     return (
         <div>
