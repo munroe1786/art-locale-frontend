@@ -17,7 +17,7 @@ const Artist = (props) => {
                 {artist ? artist.name : null} -
                 {artist ? artist.style : null}
             </li>
-            <MuseumsContainer />
+            <MuseumsContainer artist={artist} />
         </div>
     )
 }
@@ -62,3 +62,8 @@ export default Artist;
 
 //links in artists.js are rendering the
 //artist component
+
+//add artist props to Museum Container render
+
+//will render a Museum Container for every
+//artist show page that we go to
