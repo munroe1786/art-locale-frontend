@@ -1,6 +1,8 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom'
 
+import MuseumsContainer from '../containers/MuseumsContainer';
+
 const Artist = (props) => {
 
   //console.log(props)
@@ -10,10 +12,13 @@ const Artist = (props) => {
     console.log(artist)
 
     return (
-        <li>
-            {artist ? artist.name : null} -
-            {artist ? artist.style : null}
-        </li>
+        <div>
+            <li>
+                {artist ? artist.name : null} -
+                {artist ? artist.style : null}
+            </li>
+            <MuseumsContainer />
+        </div>
     )
 }
 
