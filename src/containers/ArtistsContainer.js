@@ -3,7 +3,7 @@ import Artists from '../components/Artists';
 import ArtistInput from '../components/ArtistInput';
 import Artist from '../components/Artist';
 import {connect} from 'react-redux';
-import {Route} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import {fetchArtists} from '../actions/fetchArtists';
 
 class ArtistsContainer extends React.Component {
@@ -15,9 +15,11 @@ class ArtistsContainer extends React.Component {
     render() {
         return(
             <div>
-                <Route path='/artists/new' component={ArtistInput}/>
-                <Route path='/artists/:id' render={(routerProps) => <Artist {...routerProps} artists={this.props.artists}/> } />
-                <Route exact path='/artists' render={(routerProps) => <Artists {...routerProps} artists={this.props.artists}/> } />
+                <Switch>
+                    <Route path='/artists/new' component={ArtistInput}/>
+                    <Route path='/artists/:id' render={(routerProps) => <Artist {...routerProps} artists={this.props.artists}/> } />
+                    <Route path='/artists' render={(routerProps) => <Artists {...routerProps} artists={this.props.artists}/> } />
+                </Switch>
             </div>
         )
     }
@@ -153,4 +155,13 @@ export default connect(mapStateToProps, {fetchArtists})(ArtistsContainer);
 //us params - we see id - can use this 
 //to access the specific account we want
 //to see
+
+//switch returns the first route that matches
+//that patch and won't render other 
+//components once it finds a match
+//solves problem of artist component being
+//rendered on new artist page
+
+//don't have to have exact as the path
+//when using switch
 
