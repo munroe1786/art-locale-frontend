@@ -1,12 +1,13 @@
 import React from 'react';
+import {Redirect} from 'react-router-dom'
 
 const Artist = (props) => {
 
-  console.log(props)
+  //console.log(props)
 
     let artist = props.artists[props.match.params.id - 1]
     
-    //console.log(artist)
+    console.log(artist)
 
     return (
         <li>
@@ -50,3 +51,9 @@ export default Artist;
 //through we don't have the artists yet
 //and then after the first render 
 //we have the artists
+
+//first time artist component renders, props
+//are undefined
+
+//links in artists.js are rendering the
+//artist component
