@@ -1,4 +1,5 @@
 import React from 'react';
+import MuseumInput from '../components/MuseumInput';
 
 class MuseumsContainer extends React.Component {
 
@@ -6,11 +7,13 @@ class MuseumsContainer extends React.Component {
     render() {
         return (
             <div>
-                Museums Container
+                <MuseumInput />
             </div>
         )
     }
 }
+
+export default MuseumsContainer;
 
 //containers are usually class as they 
 //typically have state and also
