@@ -1,4 +1,5 @@
 import React from 'react';
+import {Route, Link} from 'react-router-dom';
 import Artist from './Artist';
 
 const Artists = (props) => {
@@ -6,9 +7,9 @@ const Artists = (props) => {
     return(
         <div>
             {props.artists.map(artist => 
-                <div key={artist.id}>
-                <Artist artist={artist}/>
-                </div>
+                <li key={artist.id}>
+                <Link to={`/artists/${artist.id}`}>{artist.name}</Link>
+                </li>
             )}
         </div>
 
@@ -34,5 +35,13 @@ export default Artists;
 //pass in a key prop into the html element 
 //when you iterate--will cause a warning 
 //on the console
+
+//we're able to see the artists list
+//because it's no longer being directly 
+//rendered
+
+//props are coming from the route we have
+//set up - props are being passed in
+//from the route
 
 

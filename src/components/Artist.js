@@ -2,7 +2,7 @@ import React from 'react';
 
 const Artist = (props) => {
 
-    //console.log(props)
+  console.log(props)
 
     let artist = props.artists[props.match.params.id - 1]
     
@@ -17,6 +17,9 @@ const Artist = (props) => {
 }
 
 export default Artist;
+
+//{artist ? artist.name : null} -
+            //{artist ? artist.style : null}
 
 //{props.artist.name} - {props.artist.style}
 
