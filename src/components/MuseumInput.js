@@ -16,7 +16,8 @@ class MuseumInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        
+        addMuseum()
+
     }
 
     render() {
