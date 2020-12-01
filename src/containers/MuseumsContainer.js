@@ -9,7 +9,7 @@ class MuseumsContainer extends React.Component {
         return (
             <div>
                 <MuseumInput />
-                <Museums />
+                <Museums museums={this.props.artist && this.props.artist.museums} />
             </div>
         )
     }
@@ -33,3 +33,16 @@ export default MuseumsContainer;
 //the artist that is rendering the 
 //container, so we can send the 
 //MuseumsContainer props 
+
+//send down props to Museums Component
+//through the artist prop that we send 
+//to Museum Container, which then passes
+//it down to Museums Component
+
+//'this.props.artist &&' to check if 
+//this.props.artist exists, then we 
+//will move on the second part which is the 
+//array of museums
+
+//serializer helps associate museums and
+//artist
