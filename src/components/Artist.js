@@ -7,7 +7,21 @@ const Artist = (props) => {
 
   //console.log(props)
 
-    let artist = props.artists[props.match.params.id - 1]
+    //let artist = props.artists[props.match.params.id - 1]
+        //use this method so that the user experience
+        //is better--the path here is from the index in the
+        //artists array
+
+    let artist = props.artists.filter(artist => artist.id == props.match.params.id)[0]
+        //use this method so that the links work correctly
+        //the artist.id here matches the artist.id in the 
+        //links
+        //written with the [0] after the expression because filter
+        //returns a new array with only 1 artist in it
+        //so the index starts at 0 for that 
+        //1 artist - this method lets the app find 
+        //an artist 
+
     
     console.log(artist)
 

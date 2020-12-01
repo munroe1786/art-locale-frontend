@@ -2,9 +2,18 @@ import { render } from '@testing-library/react';
 import React from 'react';
 
 const Museums = (props) => {
+    
+    console.log(props.museums)
+    
     return (
         <div>
-            Museums
+            {props.museums && props.museums.map(museum =>
+                <li key={museum.id}>
+                    {museum.name}
+                    {museum.location}
+                    {museum.description}
+                </li>
+                )}
         </div>
     )
     
@@ -12,7 +21,7 @@ const Museums = (props) => {
 
 export default Museums;
 
-
+//have to check to see if props are defined 
 
 
 
