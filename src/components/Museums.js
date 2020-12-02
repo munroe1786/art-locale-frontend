@@ -4,6 +4,10 @@ import React from 'react';
 const Museums = (props) => {
     
     console.log(props.museums)
+
+    const handleDelete = () => {
+        
+    }
     
     return (
         <div>
@@ -12,6 +16,9 @@ const Museums = (props) => {
                     {museum.name}
                     {museum.location}
                     {museum.description}
+                    <button onClick={handleDelete}>
+                        Delete
+                    </button>
                 </li>
                 )}
         </div>
