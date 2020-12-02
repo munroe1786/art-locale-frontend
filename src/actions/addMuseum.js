@@ -1,7 +1,7 @@
 export const addMuseum = (museum, artistId) => {
 
     return(dispatch) => {
-        fetch(`http://localhost:300/api/v1/${artistId}/museums`, {
+        fetch(`http://localhost:3000/api/v1/artists/${artistId}/museums`, {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
@@ -18,3 +18,5 @@ export const addMuseum = (museum, artistId) => {
 //is set up - artist has many museums
 //take that artist and dispatch it to our reducer
 //saves some work in our reducer
+
+//history.push can work as a redirect 

@@ -5,6 +5,15 @@ export default function artistReducer(state = {artists: []}, action) {
             return {artists: action.payload}
         case 'ADD_ARTIST':
             return {...state, artists: [...state.artists, action.payload]}
+        case 'ADD_MUSEUM':
+            let artists = state.artists.map(artist => {
+                if (artist.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return artist
+                }
+            })
+            return {...state, artists: artists}
         default:
             return state
     }
@@ -21,3 +30,7 @@ export default function artistReducer(state = {artists: []}, action) {
 //that came back from the fetch request
 //action.payload is an array of artist objects
 //artists is the key and the array is the value
+
+//add museum involves replacing the entire account
+//rather than shoveling the museum onto the 
+//account

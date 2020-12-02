@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {addMuseum} from '../actions/addMuseum';
 
 class MuseumInput extends React.Component {
     state = {
@@ -16,8 +17,12 @@ class MuseumInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        addMuseum()
-
+        this.props.addMuseum(this.state, this.props.artist.id)
+        this.setState({
+            name: '',
+            location: '',
+            description: ''
+        })
     }
 
     render() {
@@ -51,7 +56,7 @@ class MuseumInput extends React.Component {
     }
 }
 
-export default connect(null, )(MuseumInput);
+export default connect(null, {addMuseum} )(MuseumInput);
 
 //doesn;t need mapStateToProps because props are
 //coming down from MuseumsContainer
