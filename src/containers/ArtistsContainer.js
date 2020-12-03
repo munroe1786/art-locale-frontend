@@ -5,6 +5,7 @@ import Artist from '../components/Artist';
 import {connect} from 'react-redux';
 import {Route, Switch} from 'react-router-dom';
 import {fetchArtists} from '../actions/fetchArtists';
+import NavBar from '../components/NavBar';
 
 class ArtistsContainer extends React.Component {
 
@@ -15,6 +16,7 @@ class ArtistsContainer extends React.Component {
     render() {
         return(
             <div>
+                <NavBar />
                 <Switch>
                     <Route path='/artists/new' component={ArtistInput}/>
                     <Route path='/artists/:id' render={(routerProps) => <Artist {...routerProps} artists={this.props.artists}/> } />
