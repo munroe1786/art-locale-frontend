@@ -18,7 +18,8 @@ class ArtistEdit extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.editArtist(this.state)
+        let artist = {...this.state, id: this.props.artist.id}
+        this.props.editArtist(artist)
         this.setState({
             name: '',
             style: ''
