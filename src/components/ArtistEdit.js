@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {addArtist} from '../actions/addArtist'
+import {editArtist} from '../actions/editArtist'
 
 
-class ArtistInput extends React.Component {
+class ArtistEdit extends React.Component {
 
     state = {
         name: '', 
@@ -18,7 +18,7 @@ class ArtistInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addArtist(this.state)
+        this.props.editArtist(this.state)
         this.setState({
             name: '',
             style: ''
@@ -52,4 +52,4 @@ class ArtistInput extends React.Component {
     }
 }
 
-export default connect(null, {addArtist})(ArtistInput);
+export default connect(null, {editArtist})(ArtistEdit);

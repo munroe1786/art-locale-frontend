@@ -1,5 +1,6 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom';
+import ArtistEdit from './ArtistEdit';
 
 import MuseumsContainer from '../containers/MuseumsContainer';
 
@@ -32,6 +33,7 @@ const Artist = (props) => {
                 {artist ? artist.style : null}
             </li>
             <MuseumsContainer artist={artist} />
+            <ArtistEdit artist={artist} />
         </div>
     )
 }
