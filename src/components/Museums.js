@@ -19,7 +19,7 @@ const Museums = (props) => {
                     {museum.name}
                     {museum.location}
                     {museum.description}
-                    <Link to={'/artists/museums/${museum.id'}>{museum.name}</Link>
+                    <Link to={`/artists/museums/${museum.artist_id}`}>{museum.name}</Link>
                     <button onClick={() => handleDelete(museum)}>
                         Delete
                     </button>
