@@ -33,6 +33,7 @@ const Artist = (props) => {
                 {artist ? artist.style : null}
             </li>
             <MuseumsContainer artist={artist} />
+            <h4>Edit this artist</h4>
             <ArtistEdit artist={artist} />
         </div>
     )

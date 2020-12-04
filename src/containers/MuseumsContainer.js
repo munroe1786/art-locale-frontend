@@ -1,6 +1,7 @@
 import React from 'react';
 import MuseumInput from '../components/MuseumInput';
 import Museums from '../components/Museums';
+import Museum from '../components/Museum';
 
 class MuseumsContainer extends React.Component {
 
@@ -10,6 +11,7 @@ class MuseumsContainer extends React.Component {
             <div>
                 <MuseumInput artist={this.props.artist} />
                 <Museums museums={this.props.artist && this.props.artist.museums} />
+                <Museum museum={this.props.artist && this.props.artist.museum} />
             </div>
         )
     }
