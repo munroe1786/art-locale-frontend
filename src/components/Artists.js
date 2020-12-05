@@ -33,7 +33,7 @@ export default Artists;
 //props passed in
 
 //pass in a key prop into the html element 
-//when you iterate--will cause a warning 
+//when you iterate--or else will cause a warning 
 //on the console
 
 //we're able to see the artists list

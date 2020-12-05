@@ -1,4 +1,5 @@
 import React from 'react';
+import Museums from './Museums';
 
 const Museum = (props) => {
 

@@ -20,7 +20,7 @@ const Museums = (props) => {
                     {museum.name}
                     {museum.location}
                     {museum.description}
-                    <Link to={`artist/museums/${museum.artist_id}`}>{museum.name}</Link>
+                    <Museum />
                     <button onClick={() => handleDelete(museum)}>
                         Delete
                     </button>
@@ -33,24 +33,11 @@ const Museums = (props) => {
 
 export default connect(null, {deleteMuseum} )(Museums);
 
+// <Link to={`/artist/${ArtistId}/museums/${museum.artist_id}`}>{museum.name}</Link>
 //have to check to see if props are defined 
 
 //since this is a func component - props are 
 //coming in as props not this.props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //can be a functional component since it
 //will receive props from parent Museum 
