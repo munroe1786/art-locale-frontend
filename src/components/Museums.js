@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
-import Museum from './Museum';
+//import {Link} from 'react-router-dom';
+//import Museum from './Museum';
 import {deleteMuseum} from '../actions/deleteMuseum';
 
 const Museums = (props) => {
@@ -20,7 +20,6 @@ const Museums = (props) => {
                     {museum.name}
                     {museum.location}
                     {museum.description}
-                    <Museum />
                     <button onClick={() => handleDelete(museum)}>
                         Delete
                     </button>
