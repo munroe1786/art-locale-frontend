@@ -1,5 +1,5 @@
 body {
-    background-color: lightseagreen;
+    background-color: rgba(red, green, blue, alpha);
 }
 
 .App {
@@ -16,6 +16,6 @@ font {
 }
 
 button {
-    border: 2px solid lightblue;
-  border-radius: 25px;
+    border: 2px solid darkblue ;
+    border-radius: 25px;
 }
