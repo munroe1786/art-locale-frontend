@@ -28,6 +28,7 @@ class ArtistInput extends React.Component {
     render() {
         return (
             <div>
+                <h3>Add a new Artist</h3>
                 <form onSubmit={this.handleSubmit}>
                     <label>Artist Name:</label>
                         <input type='text' 
