@@ -24,7 +24,7 @@ export default function artistReducer(state = {artists: []}, action) {
                 }
             })
             return {...state, artists: artistsTwo}
-        case 'EDIT_ACCOUNT':
+        case 'EDIT_ARTIST':
             let artistsThree = state.artists.map(artist => {
                 if (artist.id === action.payload.id) {
                     return action.payload

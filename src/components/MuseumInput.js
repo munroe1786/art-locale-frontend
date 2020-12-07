@@ -28,6 +28,7 @@ class MuseumInput extends React.Component {
     render() {
         return (
             <div>
+                <h4>Add a new Museum</h4>
                 <form onSubmit={this.handleSubmit}>
                     <label>Museum Name:</label>
                         <input type="text"
