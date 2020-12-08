@@ -18,12 +18,6 @@ class ArtistsContainer extends React.Component {
             <div>
                 <NavBar />
                 <Switch>
-                    <Route exact path='/' render={() => {
-                        return (
-                            <Redirect to='/artists' />
-                        )
-                    }}
-                    />
                     <Route path='/artists/new' component={ArtistInput}/>
                     <Route path='/artists/:id' render={(routerProps) => <Artist {...routerProps} artists={this.props.artists}/> } />
                     <Route path='/artists' render={(routerProps) => <Artists {...routerProps} artists={this.props.artists}/> } />
@@ -165,11 +159,18 @@ export default connect(mapStateToProps, {fetchArtists})(ArtistsContainer);
 //to see
 
 //switch returns the first route that matches
-//that patch and won't render other 
+//that path and won't render other 
 //components once it finds a match
 //solves problem of artist component being
 //rendered on new artist page
 
 //don't have to have exact as the path
 //when using switch
+
+//<Route exact path='/' render={() => {
+                        //return (
+                          //  <Redirect to='/artists' />
+                        //)
+                    //}}
+                    ///>
 

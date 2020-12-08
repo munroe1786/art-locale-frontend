@@ -5,6 +5,8 @@ import {deleteMuseum} from '../actions/deleteMuseum';
 
 const Museums = (props) => {
 
+    console.log(props)
+
     const handleDelete = (museum) => {
         props.deleteMuseum(museum.id, museum.artist_id)
     }
@@ -13,7 +15,7 @@ const Museums = (props) => {
         <div>
             {props.museums && props.museums.map(museum =>
                 <li key={museum.id}>
-                <Museum
+                 <Museum
                     {...museum}
                 />
                 <button onClick={() => handleDelete(museum)}>
@@ -27,7 +29,6 @@ const Museums = (props) => {
 }
 
 export default connect(null, {deleteMuseum} )(Museums);
-
 
 //have to check to see if props are defined 
 

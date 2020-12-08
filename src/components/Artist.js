@@ -8,12 +8,12 @@ const Artist = (props) => {
 
     return (
         <div>
-            <li>
+            <h3>
                 <br />
                 {artist ? artist.name : null} 
                 <br />
                 {artist ? artist.style : null}
-            </li>
+            </h3>
             <MuseumsContainer artist={artist} />
             <h4>Edit this artist</h4>
             <ArtistEdit artist={artist} />

@@ -51,7 +51,8 @@ class MuseumInput extends React.Component {
                             onChange={this.handleChange}
                             />
                             <br />
-                    <input type="submit"/>                </form>
+                    <input type="submit"/>                
+                </form>
             </div>
         )
     }
