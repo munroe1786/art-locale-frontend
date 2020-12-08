@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {editArtist} from '../actions/editArtist'
 
-
 class ArtistEdit extends React.Component {
 
     state = {

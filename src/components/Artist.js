@@ -1,7 +1,5 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
 import ArtistEdit from './ArtistEdit';
-
 import MuseumsContainer from '../containers/MuseumsContainer';
 
 const Artist = (props) => {
@@ -29,7 +27,9 @@ const Artist = (props) => {
     return (
         <div>
             <li>
-                {artist ? artist.name : null} -
+                <br />
+                {artist ? artist.name : null} 
+                <br />
                 {artist ? artist.style : null}
             </li>
             <MuseumsContainer artist={artist} />
