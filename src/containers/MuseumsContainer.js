@@ -1,5 +1,4 @@
 import React from 'react';
-//import Museum from '../components/Museum';
 import MuseumInput from '../components/MuseumInput';
 import Museums from '../components/Museums';
 
@@ -17,8 +16,6 @@ class MuseumsContainer extends React.Component {
 }
 
 export default MuseumsContainer;
-
-//<Museum museum={this.props.artist && this.props.artist.museum} />
 
 //containers are usually class as they 
 //typically have state and also

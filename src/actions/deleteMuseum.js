@@ -1,5 +1,4 @@
 export const deleteMuseum = (museumId, artistId) => {
-
     return (dispatch) => {
         return fetch(`http://localhost:3000/api/v1/artists/${artistId}/museums/${museumId}`, {
             method: 'DELETE'   
@@ -19,5 +18,5 @@ export const deleteMuseum = (museumId, artistId) => {
 
 //mimicing add museum - which instead of sending
 //back the museum, we sent back the artist 
-//from the backend, which simplified the what
+//from the backend, which simplified what
 //we needed to do in the reducer

@@ -9,6 +9,7 @@ export function fetchArtists() {
     }
 }
 //action creator is just a function
+
 //we dispatch an action 
 //an action creator creates an action
 //object and then that action object will 
@@ -34,14 +35,18 @@ export function fetchArtists() {
 
 //fetch request returns a promise that we
 //will get data eventually
+
 //once that promise is resolved
 //the response from our request comes into 
 //our first .then and is converted into json
+
 //once that response is converted into json
 //it comes down in as the argument in the 
 //next .then
+
 //artists is the same as the converted json
 //response
+
 //then dispatch - go into our reducer, take
 //our reducer this action object, take that
 //and update our redux store based on the info

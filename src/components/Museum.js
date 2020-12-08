@@ -1,5 +1,4 @@
 import React from 'react';
-//import Museums from './Museums';
 
 const Museum = (props) => {
     const {
@@ -7,10 +6,7 @@ const Museum = (props) => {
         location,
         description
     } = props
-    
-    console.log(props)
-    
-    //let museum = props.museums.filter(museum => museum.id === )
+
     return (
         <div>
             <p>{name}</p>

@@ -1,12 +1,10 @@
 export default function artistReducer(state = {artists: []}, action) {
-    //debugger
     switch (action.type) {
         case 'FETCH_ARTISTS':
             return {artists: action.payload}
         case 'ADD_ARTIST':
             return {...state, artists: [...state.artists, action.payload]}
         case 'ADD_MUSEUM':
-            //debugger
             let artists = state.artists.map(artist => {
                 if (artist.id === action.payload.id) {
                     return action.payload

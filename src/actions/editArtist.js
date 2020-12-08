@@ -1,5 +1,4 @@
 export const editArtist = (data) => {
-    //debugger
     return (dispatch) => {
         fetch(`http://localhost:3000/api/v1/artists/${data.id}`, {
             headers: {

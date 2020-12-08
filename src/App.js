@@ -14,12 +14,6 @@ class App extends React.Component {
   }
 }
 
-//const mapStateToProps = {state} => {
-//  return {
-//
-//  }
-//}//
-
 export default connect()(App);
 
 //mapStateToProps-usually first argument of connect
@@ -39,12 +33,6 @@ export default connect()(App);
 //second argument---gives us ability to 
 //dispatch new actions to our store
 //directly from our component
-
-//const mapStateToProps = {state} => {
-//  return {
-//
-//  }
-//}//
 
 
 
