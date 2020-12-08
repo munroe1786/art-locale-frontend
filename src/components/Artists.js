@@ -1,14 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
-import {deleteArtist} from '../actions/deleteArtist';
 
 const Artists = (props) => {
-
-    const handleDelete = (artist) => {
-        //debugger
-        props.deleteMuseum(artist.id)
-    }
+    
     return(
         <div>
             <h3>Welcome to Art Locale</h3>
@@ -16,6 +10,7 @@ const Artists = (props) => {
             {props.artists.map(artist => 
                 <li key={artist.id}>
                 <Link to={`/artists/${artist.id}`}>{artist.name}</Link>
+    
                 </li>
             )}
         </div>
@@ -23,7 +18,7 @@ const Artists = (props) => {
     )
 }
 
-export default connect(null, {deleteArtist} )(Artists);
+export default Artists;
 
 
 
