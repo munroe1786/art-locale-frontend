@@ -1,9 +1,14 @@
 import React from 'react';
-import {Route, Link} from 'react-router-dom';
-import Artist from './Artist';
+import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {deleteArtist} from '../actions/deleteArtist';
 
 const Artists = (props) => {
 
+    const handleDelete = (artist) => {
+        //debugger
+        props.deleteMuseum(artist.id)
+    }
     return(
         <div>
             <h3>Welcome to Art Locale</h3>
@@ -18,7 +23,8 @@ const Artists = (props) => {
     )
 }
 
-export default Artists;
+export default connect(null, {deleteArtist} )(Artists);
+
 
 
 //this component will get props from 
