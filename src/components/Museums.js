@@ -15,9 +15,9 @@ const Museums = (props) => {
         <div>
             {props.museums && props.museums.map(museum =>
                 <li key={museum.id}>
-                 <Museum
-                    {...museum}
-                />
+                    <Museum
+                        {...museum}
+                    />
                 <button onClick={() => handleDelete(museum)}>
                     Delete
                 </button>
@@ -39,3 +39,14 @@ export default connect(null, {deleteMuseum} )(Museums);
 //will receive props from parent Museum 
 //Container 
 //this component's job is to render Museums
+
+//{props.museums && props.museums.map(museum =>
+  //  <li key={museum.id}>
+    // <Museum
+      //  {...museum}
+    ///>
+    //<button onClick={() => handleDelete(museum)}>
+      //  Delete
+    //</button>
+    //</li>
+//)}

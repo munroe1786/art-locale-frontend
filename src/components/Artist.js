@@ -77,3 +77,6 @@ export default Artist;
         //so the index starts at 0 for that 
         //1 artist - this method lets the app find 
         //an artist 
+
+//send an artist to the MuseumsContainer via
+//artist={artist}

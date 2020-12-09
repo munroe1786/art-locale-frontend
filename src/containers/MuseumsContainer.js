@@ -30,7 +30,7 @@ export default MuseumsContainer;
 //those props down to its children
 //also because of the serializer
 
-//MuseumsContainer needs know about 
+//MuseumsContainer needs to know about 
 //the artist that is rendering the 
 //container, so we can send the 
 //MuseumsContainer props 
@@ -47,3 +47,6 @@ export default MuseumsContainer;
 
 //serializer helps associate museums and
 //artist
+
+//no routes in this container so props 
+//are from Artist, not from router props
