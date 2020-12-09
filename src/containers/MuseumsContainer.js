@@ -8,9 +8,8 @@ class MuseumsContainer extends React.Component {
     render() {
         return (
             <div>
-                <MuseumInput artist={this.props.artist} />
                 <Museums museums={this.props.artist && this.props.artist.museums} />
-        
+                <MuseumInput artist={this.props.artist} />
             </div>
         )
     }

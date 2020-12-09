@@ -24,7 +24,6 @@ class ArtistsContainer extends React.Component {
                         )
                     }}
                     />
-
                     <Route path='/artists/new' component={ArtistInput}/>
                     <Route path='/artists/:id' render={(routerProps) => <Artist {...routerProps} artists={this.props.artists}/> } />
                     <Route path='/artists' render={(routerProps) => <Artists {...routerProps} artists={this.props.artists}/> } />
