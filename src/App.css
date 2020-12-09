@@ -11,6 +11,10 @@ font {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+li {
+    list-style-type: none;
+}
+
 button {
     border: 2px solid darkblue ;
     border-radius: 25px;
