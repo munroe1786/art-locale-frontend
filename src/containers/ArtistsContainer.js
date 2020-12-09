@@ -18,6 +18,13 @@ class ArtistsContainer extends React.Component {
             <div>
                 <NavBar />
                 <Switch>
+                <Route exact path='/' render={() => {
+                        return (
+                          <Redirect to='/artists' />
+                        )
+                    }}
+                    />
+
                     <Route path='/artists/new' component={ArtistInput}/>
                     <Route path='/artists/:id' render={(routerProps) => <Artist {...routerProps} artists={this.props.artists}/> } />
                     <Route path='/artists' render={(routerProps) => <Artists {...routerProps} artists={this.props.artists}/> } />
