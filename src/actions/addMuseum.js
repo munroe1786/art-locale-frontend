@@ -12,6 +12,23 @@ export const addMuseum = (museum, artistId) => {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //response will have the artist associated with
 //this new museum because of how the backend 
 //is set up - artist has many museums

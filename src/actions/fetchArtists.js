@@ -8,6 +8,24 @@ export function fetchArtists() {
         }))
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //action creator is just a function
 
 //we dispatch an action 

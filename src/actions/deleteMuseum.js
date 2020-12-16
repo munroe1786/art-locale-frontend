@@ -13,6 +13,18 @@ export const deleteMuseum = (museumId, artistId) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 //this action needs the museum ID and the artist
 //ID since they are associated
 

@@ -36,6 +36,14 @@ export default function artistReducer(state = {artists: []}, action) {
     }
 }
 
+
+
+
+
+
+
+
+
 //the cases in our switch are checking 
 //the action type
 //

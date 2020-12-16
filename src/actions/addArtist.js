@@ -17,6 +17,19 @@ export const addArtist = (data) => {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 //data is coming from the state in our 
 //artist input form
 
