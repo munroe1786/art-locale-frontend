@@ -55,6 +55,14 @@ class ArtistInput extends React.Component {
 
 export default connect(null, {addArtist})(ArtistInput);
 
+
+
+
+
+
+
+
+
 //need a controlled form
 //uncontrolled form - the elements float
 //around in the DOM

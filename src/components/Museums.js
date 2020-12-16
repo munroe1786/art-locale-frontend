@@ -5,7 +5,7 @@ import {deleteMuseum} from '../actions/deleteMuseum';
 
 const Museums = (props) => {
 
-    console.log(props)
+    //console.log(props)
 
     const handleDelete = (museum) => {
         props.deleteMuseum(museum.id, museum.artist_id)
@@ -29,6 +29,14 @@ const Museums = (props) => {
 }
 
 export default connect(null, {deleteMuseum} )(Museums);
+
+
+
+
+
+
+
+
 
 //have to check to see if props are defined 
 

@@ -60,6 +60,14 @@ class MuseumInput extends React.Component {
 
 export default connect(null, {addMuseum} )(MuseumInput);
 
+
+
+
+
+
+
+
+
 //doesn't need mapStateToProps because props are
 //coming down from MuseumsContainer
 //

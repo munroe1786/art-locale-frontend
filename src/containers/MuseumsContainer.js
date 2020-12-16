@@ -17,6 +17,16 @@ class MuseumsContainer extends React.Component {
 
 export default MuseumsContainer;
 
+
+
+
+
+
+
+
+
+
+
 //containers are usually class as they 
 //typically have state and also
 //functionality

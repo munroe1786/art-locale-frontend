@@ -23,6 +23,11 @@ export default Artists;
 
 
 
+
+
+
+
+
 //this component will get props from 
 //the Artist Container
 

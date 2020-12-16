@@ -24,6 +24,11 @@ const Artist = (props) => {
 export default Artist;
 
 
+
+
+
+
+
 //need to use React Router to be able to see
 //a specific account
 
