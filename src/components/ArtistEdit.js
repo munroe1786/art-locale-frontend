@@ -18,7 +18,7 @@ class ArtistEdit extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         let artist = {...this.state, id: this.props.artist.id}
-        this.props.editArtist(artist)
+        this.props.editArtistDispatch(artist)
         this.setState({
             name: '',
             style: ''
@@ -52,4 +52,12 @@ class ArtistEdit extends React.Component {
     }
 }
 
-export default connect(null, {editArtist})(ArtistEdit);
+const mapDispatchToProps = (dispatchFn) => {
+    return {
+        editArtistDispatch: (artist) => {
+            dispatchFn(editArtist(artist)) 
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ArtistEdit);
