@@ -91,3 +91,46 @@ connect calls dispatch for us on the
     and return dispatch and send that action to our reducer it will update our
     redux store which would not happen if we did not pass in fetchArtists as the second argument
 
+App.js notes
+
+//mapStateToProps-usually first argument of connect
+// is our way of accessing
+//values in our store as props
+
+//second argument of connect is mapDispatchToProps
+//or an action creator eg: fetchArtists
+
+//second argument gives up the ability
+//to update our store directly from this
+//component
+
+//maptStateToProps---gives us access to 
+//current store
+
+//second argument---gives us ability to 
+//dispatch new actions to our store
+//directly from our component
+
+Reducer notes
+
+
+//the cases in our switch are checking 
+//the action type
+//
+
+//whatever we return from our reducer
+//will be our new state
+
+//want artists to point to the array 
+//that came back from the fetch request
+//action.payload is an array of artist objects
+//artists is the key and the array is the value
+
+//add museum involves replacing the entire account
+//rather than shoveling the museum onto the 
+//account
+
+
+
+
+
