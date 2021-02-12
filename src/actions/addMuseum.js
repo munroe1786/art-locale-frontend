@@ -11,29 +11,3 @@ export const addMuseum = (museum, artistId) => {
         .then(artist => dispatch({type: 'ADD_MUSEUM', payload: artist}))
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//response will have the artist associated with
-//this new museum because of how the backend 
-//is set up - artist has many museums
-
-//take that artist and dispatch it to our reducer
-//saves some work in our reducer
-
-//history.push can work as a redirect 

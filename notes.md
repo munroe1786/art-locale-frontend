@@ -130,6 +130,97 @@ Reducer notes
 //rather than shoveling the museum onto the 
 //account
 
+Fetch Artists notes
+
+//action creator is just a function
+
+//we dispatch an action 
+//an action creator creates an action
+//object and then that action object will 
+//be dipatched to our reducer which will then
+//return our new version of the state
+//based on the action that we set
+
+//thunk allows us to use dispatch inside
+//our action creator
+
+//return dispatch => { not an object, just the
+//block of our anonymous function}
+
+//so connect won't automatically dispatch
+//an action 
+
+//allows us to dispatch 
+
+//pass in dispatch, which is a built in dispatch
+//function so that we can use it inside our
+//action creator and dispatch the response
+//from our fetch request
+
+//fetch request returns a promise that we
+//will get data eventually
+
+//once that promise is resolved
+//the response from our request comes into 
+//our first .then and is converted into json
+
+//once that response is converted into json
+//it comes down in as the argument in the 
+//next .then
+
+//artists is the same as the converted json
+//response
+
+//then dispatch - go into our reducer, take
+//our reducer this action object, take that
+//and update our redux store based on the info
+//being sent
+
+Add Artist notes
+
+//data is coming from the state in our 
+//artist input form
+
+//thunk allows us to bring the dispatch 
+//function into our actions and call dispatch
+//rather than having connect do that 
+//automatically for us
+
+//accept is what content-types will be accepted
+//when the data is returned
+
+//body is the data that we're sending down
+//in this case, the artist object that we're
+//passing in as data
+//stringify it because the server expects
+//it as a string and it's an object now
+
+//first then converts the string that's
+//sent over to JSON
+
+//next then - data - is either the new account
+//or the error object (both from the backend)
+
+//account is the json-ified response
+
+//then dispatch to the reducer with a type 
+//add artist and a payload of artist
+
+//need to add another case to our reducer
+
+Add Museum notes
+
+//response will have the artist associated with
+//this new museum because of how the backend 
+//is set up - artist has many museums
+
+//take that artist and dispatch it to our reducer
+//saves some work in our reducer
+
+//history.push can work as a redirect 
+
+
+
 
 
 
