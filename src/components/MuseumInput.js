@@ -59,19 +59,3 @@ class MuseumInput extends React.Component {
 }
 
 export default connect(null, {addMuseum} )(MuseumInput);
-
-
-
-
-
-
-
-
-
-//doesn't need mapStateToProps because props are
-//coming down from MuseumsContainer
-//
-
-//controlled form can mean values assigned to your input 
-//options are controlled
-//by local state or the redux store
