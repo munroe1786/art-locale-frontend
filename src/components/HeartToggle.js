@@ -9,7 +9,7 @@ class HeartToggle extends React.Component {
         handleClick = () => {
             this.setState(previousState => {
                 return {
-                display: !previousState.display
+                    display: !previousState.display
                 }
             })
         }
