@@ -1,3 +1,7 @@
+
+![flipboard-Ylus81fS7q4-unsplash](https://user-images.githubusercontent.com/51828035/143291544-e4332365-8a48-4177-a93c-b97be5f6c968.jpg)
+
+
 Art Locale fetches data from the Rails API backend and uses React-Redux for client side routing and rendering.  This app allows the user to add Artists to the app and then add Museums to each Artist.  Each Artist has many Museums and a Museum belongs to an Artist.  
 
 # Getting Started with Create React App
